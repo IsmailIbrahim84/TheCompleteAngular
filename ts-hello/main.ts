@@ -60,7 +60,28 @@ class PointClass {
     }
 
     getDistance(another: Point){
-        
+
     }
 }
+let point1 = new PointClass();
+point1.x = 1;
+point1.y = 2;
+point1.draw();
 
+//Class with Access modifier in Constructor parameters
+class PointB {
+    constructor(private _x?: number, private _y?: number) {
+    }
+    draw(){
+        console.log('X: '+ this._x + ', Y: '+this._y);
+    }
+
+    get x(){
+        return this._x;
+    }
+    set x(value){
+        if (value<0)
+            throw new Error('value cannot be less than 0.');
+        this._x = value;
+    }
+}
