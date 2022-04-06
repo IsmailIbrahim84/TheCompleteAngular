@@ -4,15 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {CoursesComponent} from "./Courses.Component";
+import {FormsModule} from "@angular/forms";
+import { SummaryPipe } from './summary.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent,CoursesComponent
+    AppComponent,CoursesComponent, SummaryPipe
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
